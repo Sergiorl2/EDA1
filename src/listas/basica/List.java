@@ -36,6 +36,7 @@ public class List {
             this.first = newNode;
         }
         this.size++;
+        }
     }
 
     public void deleteEnd() {
@@ -62,6 +63,11 @@ public class List {
         }
     }
 
+    public void clearList() {
+        this.first = null; 
+        this.size = 0;    
+    }
+
     public Node[] find(String value){
         Node iterator = this.first;
         Node[] nodes = new Node[this.size];
@@ -74,7 +80,6 @@ public class List {
             iterator = iterator.getNext();
         }
         return nodes;
-    }
     }
 
     public String[] listAll() {
